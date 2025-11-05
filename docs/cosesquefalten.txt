@@ -32,4 +32,4 @@ paginacio de taules llargues OK FET
 11) falla grabació tutor a grup
 12) acabar gestió de sessions
 13) ciber attack
-14) que passa amb els ordinadors assignats al professorat
+14) que passa amb els ordinadors assignats al professorat  
