@@ -1,5 +1,5 @@
 INSERT INTO cherlock.revisions (`data_rev`, `hora_rev`, `email`, `aula`, `estat`, `comentaris`) VALUES ('2025-2-4','21:22:30','uxam@cifpfbmoll.eu','C402','OK','');
-INSERT INTO cherlock.revisions (`data_rev`, `hora_rev`, `email`, `aula`, `estat`, `comentaris`) VALUES ('2025-2-5','1:9:28','aacuna@cifpfbmoll.eu','C101','OK','');
+INSERT INTO cherlock.revisions (`data_rev`, `hora_rev`, `email`, `aula`, `estat`, `comentaris`) VALUES ('2025-2-5','1:9:28','uxam@cifpfbmoll.eu','C101','OK','');
 INSERT INTO cherlock.revisions (`data_rev`, `hora_rev`, `email`, `aula`, `estat`, `comentaris`) VALUES ('2025-2-5','1:9:45','aacuna@cifpfbmoll.eu','A207','OK','');
 INSERT INTO cherlock.revisions (`data_rev`, `hora_rev`, `email`, `aula`, `estat`, `comentaris`) VALUES ('2025-2-5','14:14:40','cnoguera@cifpfbmoll.eu','C401','OK','');
 INSERT INTO cherlock.revisions (`data_rev`, `hora_rev`, `email`, `aula`, `estat`, `comentaris`) VALUES ('2025-2-5','14:19:36','xordinasribas@cifpfbmoll.eu','C201','OK','');
