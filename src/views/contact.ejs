@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Page</title>
+  <%- include("partials/head") %>
+    <script src="funcions.js"></script>
+</head>
+
+<body>
+  <%- include("partials/navigation") %>
+
+    <div class="container pt-2 text-center justify-content-center align-items-center vh-100">
+      <div class="card animated flipInY bg-gray p-3 border-secondary">
+        <div class="card-header bg-gray text-black text-center">
+          <h3>Contactar</h3>
+        </div>
+          <form action="/">
+            <div class="bordeoutset">
+            <div class="mb-2">
+              <label for="email">Email:</label>
+              <input class="form-control" type="text" placeholder="Email" />
+            </div>
+            <div class="mb-3">
+              <label for="email">Missatge:</label>
+              <textarea id="emails" name="missatge" cols="30" rows="10" placeholder="Missatge"></textarea>
+            </div>
+            <input type="submit"  value="Enviar" />
+            <button type="button" onclick="torna()">Tancar</button>
+            </div>
+          </form>
+      </div>
+    </div>
+
+    <%- include("partials/footer") %>
+</body>
+
+</html>

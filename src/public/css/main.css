@@ -1,0 +1,139 @@
+body {
+  background: #1291b8;
+  color: white;
+}
+
+.navbar-brand {
+  font-family: 'Spicy Rice', cursive;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  font-family: 'Spicy Rice', cursive;
+}
+
+header img {
+  width: 60%;
+}
+
+.fons {
+  background-color: rgb(80, 134, 233);
+  font-size: x-large;
+  border: 2px solid rgb(233, 233, 152);
+  border-collapse: collapse;
+  color: rgb(233, 233, 152);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: auto;
+}
+
+th, td {
+  text-align: center;
+  padding: 8px;
+  border: 1px solid #ddd;
+  /* margin-left: auto;
+  margin-right: auto; */
+}
+
+tr:nth-child(odd) {
+  background-color: rgb(101, 146, 231);
+}
+
+form {
+  /* Define el ancho del formulario */
+  width:50%;
+  padding: 20px;
+  margin: 10px auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 5px;
+}
+
+#configuracio {
+  /* Define el ancho del formulario */
+  width:90%;
+}
+
+label {
+  /*Aumenta el tamaño de la fuente de las etiquetas */
+  /* color:black; */
+  font-size: 16px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"] {
+  /* Tamaño y estilo de los campos de texto */
+  width: 80%;
+  height: 20px;
+  padding: 10px;
+  /*border: 1px solid #ccc;
+  border-radius: 3px;*/
+  font-size: 14px;
+  text-align: left;
+  float: right;
+}
+
+#comentaris {
+  /* Tamaño y estilo de los campos de texto */
+  height: 80px;
+}
+
+#emails {
+  /* Tamaño y estilo de los campos de texto */
+  height: 200px;
+}
+
+input[type="submit"], [type="file"], button {
+  /* Estilo del botón */
+  background-color: #1970e2;
+  /* verde */
+  color: white;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+textarea {
+  width: 100%;
+  height: 500px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 14px;
+  resize: none;
+  display: inline-block;
+  word-break: break-all;
+  white-space: pre-line;  
+}
+
+#titol {
+white-space: nowrap;
+}
+
+#about {
+  width: 100%;
+  display: block;
+  /* margin: top
+  flex-direction: row; */
+  justify-content: center;
+  align-items: center;
+  /*vertical-align:top;
+  background-color: rgb(80, 134, 233);
+  border: 10px outset #cccccc; */
+}
+
+div.bordeoutset{
+  height: 380px;
+  border: 10px outset #cccccc;
+  background-color: rgb(80, 134, 233);
+  padding: 12px 20px;
+}

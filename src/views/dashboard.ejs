@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    <%= title %>
+  </title>
+  <%- include("partials/head") %>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body onload="pinta()">
+  <!-- HEADER -->
+  <%- include("partials/navigation") %>
+  <!-- My Content -->
+  <div style="width:80%; height:80%; margin-left: auto;  margin-right: auto;">
+    <table class="fons">
+      <tr>
+        <td>
+          <div class="dbd"><canvas id="RevGrafica"></canvas></div>
+        </td>
+        <td>
+          <div class="dbd"><canvas id="RevGrafica2"></canvas></div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="dbd"><canvas id="RevGrafica3"></div></canvas>
+        </td>
+        <td>
+          <div class="dbd"><canvas id="RevGrafica4"></div></canvas>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <script>
+    function pinta() {
+      let miCanvas = document.getElementById("RevGrafica").getContext("2d");
+      let miCanvas2 = document.getElementById("RevGrafica2").getContext("2d");
+      let miCanvas3 = document.getElementById("RevGrafica3").getContext("2d");
+      let miCanvas4 = document.getElementById("RevGrafica4").getContext("2d");
+
+      var labels="<%- labels1 %>".split("#,");
+      var labels3="<%- labels3 %>".split(",");
+      var labels4="<%- labels4 %>".split(",");
+      var chart = new Chart(miCanvas, {
+        type: "bar",
+        options: {
+          responsive: false,
+          maintainAspectRatio: true
+        },
+        data: {
+          labels: labels,
+          datasets: [{
+            label: "Gràfica de revisions no fetes",
+            backgroundColor:  "#f5e342",
+            bordercolor: "#f5e342",
+            data:[<%= data1 %>],
+          }]
+        }
+      })
+      var chart2 = new Chart(miCanvas2, {
+        type: "bar",
+        options: {
+          responsive: false,
+          maintainAspectRatio: true
+        },
+        data: {
+          labels: ["Incidencies","OK", "Fetes","A fer"],
+          datasets: [{
+            label: "Gràfica de revisions",
+            backgroundColor: "#8a42f5",
+            bordercolor: "#8a42f5",
+            data: [<%= data2 %>],
+          }]
+        }
+      })
+      var chart3 = new Chart(miCanvas3, {
+        type: "pie",
+        options: {
+          responsive: false,
+          maintainAspectRatio: true
+        },
+        data: {
+          labels: labels3,
+          datasets: [{
+            label: "Gràfica d'Estat Carretons'",
+            backgroundColor: "#42f593",
+            bordercolor: "#42f593",
+            data: [<%= data3 %>],
+          }]
+        }
+      })
+      var chart4 = new Chart(miCanvas4, {
+        type: "bar",
+        options: {
+          responsive: false,
+          maintainAspectRatio: true
+        },
+        data: {
+          labels: labels4,
+          datasets: [{
+            label: "Gràfica de portàtils per carretons",
+            backgroundColor: "#1970e2",
+            bordercolor: "#1970e2",
+            data: [<%= data4 %>],
+          }]
+        }
+      })
+    }
+  </script>
+</body>
+
+</html>

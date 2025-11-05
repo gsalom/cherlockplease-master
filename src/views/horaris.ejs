@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= title %></title>
+  <%- include("partials/head") %>
+  <script>
+    function obrir(id){
+        window.open("./hor_forms?id="+id, '_blank');
+    }
+</script>
+</head>
+
+<body onfocus="location.reload()">
+  <!-- HEADER -->
+  <%- include("partials/navigationbackend") %>
+  <!-- My Content -->
+  <main class="container pt-2 text-center justify-content-center align-items-center vh-100" style="auto">
+    <section>
+      <h2 class="display-1">Horari setmanal de revisions</h2><%- include("partials/paginacio") %>
+      <table class="table table-bordered fons" width="100%" cellspacing="0">
+        <tr>
+          <th>Grup</th>
+          <th>Aula</th>
+          <th>Professor/a</th>
+          <th>Dia setmana</th>
+          <th>Hora</th>
+          <th>Tipus</th>
+          <th>Edició</th>
+        </tr>
+        <% data.forEach(function(dat){ %>
+        <tr>
+          <td><%= dat.grup %></td>
+          <td><%= dat.aula %></td>
+          <td><%= dat.profe %></td>
+          <td><%= dat.dia %></td>
+          <td><%= dat.hora %></td>
+          <td><%= dat.tipus %></td>
+          <td><button type="button" onclick="obrir(<%= dat.id_hor %>)">Editar</button></td>
+          <%  }); %>
+        </tr>
+      </table>
+    </section>
+  </main>
+</body>
+
+</html>

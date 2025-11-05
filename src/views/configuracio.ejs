@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    <%= title %>
+  </title>
+  <%- include("partials/head") %>
+  <script>
+    function leerFichero(tipus) {
+      if (tipus == 'sql') idnomfile = 'fitxer'
+      else if (tipus == 'xml1') idnomfile = 'fitxer2'
+      else if (tipus == 'xml2') idnomfile = 'fitxer3'
+      else  if (tipus == 'xml3') idnomfile = 'fitxer4'
+      else idnomfile = 'fitxer5';
+      const fileInput = document.getElementById(idnomfile)
+      const file = fileInput.files[0];
+      //console.log(file);
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          const output = document.getElementById('codi');
+          output.textContent = e.target.result;
+        };
+        reader.readAsText(file);
+      } else {
+        if (tipus == 'sql') alert('Selecciona un fitxer *.sql')
+        else alert('Selecciona un fitxer *.xml')
+      }
+    }
+
+    function loadXml(tipus) {
+      window.open("./loadXml?id=" + decodeURI(tipus), '_blank');
+    }
+
+    function tanca() {
+      window.close();
+    }
+  </script>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <%- include("partials/navigationbackend") %>
+  <!-- My Content -->
+  <main class="container pt-2 text-center justify-content-center align-items-center vh-100" style="margin:auto">
+    <h2 class="display-1">Configuració Cherlock</h2>
+    <section>
+      <form id="configuracio" target="_blank" action="/load" method="get">
+        <table class="table table-bordered fons" width="100%" cellspacing="3" margin="auto">
+          <tr>
+            <th>Acció</th>
+            <th>Consulta</th>
+            <th>Veure</th>
+            <th>Actualitzar</th>
+          </tr>
+          <tr>
+            <th>Carregar noves revisions</th>
+            <th><input type="file" id="fitxer" name="fitxer" accept=".sql"></th>
+            <th><button type="button" onclick="leerFichero('sql')">Veure</button></th>
+            <!--<th><button type="button" onclick="accio">Carregar</button></th>-->
+             <th><input type="submit" name="accio" value="Carregar"></th> 
+          </tr>
+          <tr>
+            <th>Carregar professorat</th>
+            <th><input type="file" id="fitxer2" name="fitxer2" accept=".xml"></th>
+            <th><button type="button" onclick="leerFichero('xml1')">Veure</button></th>
+            <th><button type="button" onclick="loadXml('xml1')">Carregar</button></th>
+          </tr>
+          <tr>
+            <th>Carregar alumnat</th>
+            <th><input type="file" id="fitxer3" name="fitxer3" accept=".xml"></th>
+            <th><button type="button" onclick="leerFichero('xml2')">Veure</button></th>
+            <th><button type="button" onclick="loadXml('xml2')">Carregar</button></th>
+          </tr>
+          <tr>
+            <th>Carregar departaments</th>
+            <th><input type="file" id="fitxer4" name="fitxer4" accept=".xml"></th>
+            <th><button type="button" onclick="leerFichero('xml3')">Veure</button></th>
+            <th><button type="button" onclick="loadXml('xml3')">Carregar</button></th>
+          </tr>
+          <tr>
+            <th>Carregar horaris</th>
+            <th><input type="file" id="fitxer5" name="fitxer5" accept=".xml"></th>
+            <th><button type="button" onclick="leerFichero('xml4')">Veure</button></th>
+            <th><button type="button" onclick="loadXml('xml4')">Carregar</button></th>
+          </tr>
+          <tr>
+            <th COLSPAN=4>
+              <h3>Contingut del fitxer:</h3><textarea id="codi" name="codi"></textarea>
+            </th>
+          </tr>
+        </table>
+      </form>
+    </section>
+  </main>
+</body>
+
+</html>

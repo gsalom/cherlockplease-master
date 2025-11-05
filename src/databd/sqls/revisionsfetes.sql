@@ -1,0 +1,12 @@
+INSERT INTO cherlock.revisions (`data_rev`, `hora_rev`, `email`, `aula`, `estat`, `comentaris`) VALUES ('2025-2-4','21:22:30','uxam@cifpfbmoll.eu','C402','OK','');
+INSERT INTO cherlock.revisions (`data_rev`, `hora_rev`, `email`, `aula`, `estat`, `comentaris`) VALUES ('2025-2-5','1:9:28','aacuna@cifpfbmoll.eu','C101','OK','');
+INSERT INTO cherlock.revisions (`data_rev`, `hora_rev`, `email`, `aula`, `estat`, `comentaris`) VALUES ('2025-2-5','1:9:45','aacuna@cifpfbmoll.eu','A207','OK','');
+INSERT INTO cherlock.revisions (`data_rev`, `hora_rev`, `email`, `aula`, `estat`, `comentaris`) VALUES ('2025-2-5','14:14:40','cnoguera@cifpfbmoll.eu','C401','OK','');
+INSERT INTO cherlock.revisions (`data_rev`, `hora_rev`, `email`, `aula`, `estat`, `comentaris`) VALUES ('2025-2-5','14:19:36','xordinasribas@cifpfbmoll.eu','C201','OK','');
+INSERT INTO cherlock.revisions (`data_rev`, `hora_rev`, `email`, `aula`, `estat`, `comentaris`) VALUES ('2025-2-5','18:13:46','apetitverd@cifpfbmoll.eu','C300','OK','');
+INSERT INTO cherlock.revisions (`data_rev`, `hora_rev`, `email`, `aula`, `estat`, `comentaris`) VALUES ('2025-2-5','18:18:49','jladariasanchez@cifpfbmoll.eu','C402','OK','');
+INSERT INTO cherlock.revisions (`data_rev`, `hora_rev`, `email`, `aula`, `estat`, `comentaris`) VALUES ('2025-2-5','19:37:42','bseguraduran@cifpfbmoll.eu','A105','OK','');
+INSERT INTO cherlock.revisions (`data_rev`, `hora_rev`, `email`, `aula`, `estat`, `comentaris`) VALUES ('2025-2-5','19:42:50','cramiscrespi@cifpfbmoll.eu','A206','OK','');
+INSERT INTO cherlock.revisions (`data_rev`, `hora_rev`, `email`, `aula`, `estat`, `comentaris`) VALUES ('2025-2-5','20:38:54','dpueyosoler@cifpfbmoll.eu','A209','OK','');
+INSERT INTO cherlock.revisions (`data_rev`, `hora_rev`, `email`, `aula`, `estat`, `comentaris`) VALUES ('2025-2-5','21:3:40','bseguraduran@cifpfbmoll.eu','C201','OK','');
+INSERT INTO cherlock.revisions (`data_rev`, `hora_rev`, `email`, `aula`, `estat`, `comentaris`) VALUES ('2025-2-5','21:4:14','tserna@cifpfbmoll.eu','C401','OK','');

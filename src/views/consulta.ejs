@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= title %></title>
+  <%- include("partials/head") %>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <%- include("partials/navigation") %>
+  <!-- My Content -->
+  <main class="container pt-2 text-center justify-content-center align-items-center vh-100" style="auto">
+    <section>
+      <h2 class="display-1">Consulta entre dates</h2>
+      <table class="table table-bordered fons" width="100%" cellspacing="0">
+        <tr>
+          <th>Data inici</th>
+          <th>Data final</th>
+          <th>Consulta</th>
+        </tr>
+        <tr>
+          <form action="/revisions" method="get">
+            <th><input type="date" name="dataini"></th>
+            <th><input type="date" name="datafin"></th>
+            <th><input type="submit" value="Totes les Revisions"></th>
+          </form>
+        </tr>
+        <tr>
+          <form action="/emails" method="get">
+            <th><input type="date" name="dataini"></th>
+            <th><input type="date" name="datafin"></th>
+            <th><input type="submit" value="Revisions no fetes"></th>
+          </form>
+        </tr>
+        <tr>
+          <form action="/incidencies" method="get">
+            <th><input type="date" name="dataini"></th>
+            <th><input type="date" name="datafin"></th>
+            <th><input type="submit" value="Revisions amb incidències"></th>
+          </form>
+        </tr>
+        <tr>
+          <form action="/recordatoris" method="get">
+            <th><input type="date" name="dataini"></th>
+            <th><input type="date" name="datafin"></th>
+            <th><input type="submit" value="Recordatori revisions a fer"></th>
+          </form>
+        </tr>
+    </section>
+  </main>
+</body>
+
+</html>

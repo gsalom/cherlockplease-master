@@ -1,0 +1,35 @@
+Consultar per dates totes les revisions OK FET
+Consultar per dates revisions amb incidencies OK FET
+ordenar per data hora les revisions OK FET
+llevar username de professorat OK FET
+a taula grups ficar nom tutors podiem llevar tutor2 de taula grups OK FET
+Repassar els horaris falten tipus 1 pq n'hi ha d'haber 5 per dia-aula OK FET
+Enviar email revisions no fetes OK FET
+Ficar a taula horaris el nom del grup IFC32A p.e. y ordenar per aquest i dia, hora OK FET
+Fer formularis de modificacions als backend OK FET
+Autonatitzar la carrega de revisions per un fitxer *.sql OK FET
+No surten menús al mòbil OK FET
+ficar option disable a les funcions de carrega de selects OK FET
+Fer el panell dashboard OK FET
+Omplir pàgina about OK FET
+Omplir pàgina contacte OK FET
+Afegits taules ordinadors i alumnat OK FET
+Afegit camp ImportGestIB a taules (grup, cicles)-> Alumnat , departament-> Professorat, a taules i forms OK FET
+Crear l'assignació per ordinador per alumnat/carreto OK FET
+Arreglar login ok FET
+paginacio de taules llargues OK FET
+
+1) Fer taula i formulari a ordinadors i alumnat 
+2) Fer carrega db des de GestIB 3/4 FET falta mirar si grups, cicles i aules???
+3) Crear docker amb es programa 
+4) Crear una pag que surti per carretor amb un semafor això al dash board
+5) Fer el readme de git hub
+6) Mirar on s'ha de tancar les connexions a la BD amb con.end() mirar codi del fitxer async/await.js
+7) Taula de calendari 
+8) Control de FCT's i DUAL
+9) enviar email de canvi d'stock o moviments d'un carretó
+10) fer etiquetes QR dels carretons
+11) falla grabació tutor a grup
+12) acabar gestió de sessions
+13) ciber attack
+14) que passa amb els ordinadors assignats al professorat

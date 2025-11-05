@@ -1,0 +1,49 @@
+import nodemailer from "nodemailer"
+import mysql from "mysql";
+import credentials from "./credentials.cjs";
+
+var con = mysql.createConnection({
+  host: credentials.basededades.host,
+  user: credentials.basededades.user,
+  password: credentials.basededades.password,
+  database: credentials.basededades.database
+});
+
+con.connect(function (err) {
+  if (err) throw err;
+  console.log("Connected SMTP!");
+});
+
+const mailTransport = nodemailer.createTransport({
+  service: "Gmail",
+  auth: {
+    user: credentials.sendgrid.user,
+    pass: credentials.sendgrid.password
+  },
+});
+
+async function recgo(email, data, hora, aula, grup, profe) {
+  //console.log(credentials.sendgrid.user+', '+credentials.sendgrid.password);
+  try {
+    
+    const result = await mailTransport.sendMail({
+      from: 'cherlock@cifpfbmoll.eu',
+      //to: 'gsalom@cifpfbmoll.eu',
+      //to: email,
+      // cc:  'cap.dept.informatica@cifpfbmoll.eu',
+      subject: 'Recordatori de fer la revisió del carretó de la ' + aula + ' ' + '(' + data + ' - ' + hora + ') !!!',
+      text: "El dia " + data + " a la hora " + hora + " has de revisat el carretó de la " + aula + " del " + grup + " Email: " + email
+    });
+
+    //Insert a record in the "recordatoris" table:
+    var sql = "insert into cherlock.recordatoris (email, aula, dia, hora, grup, professorat) values ('"+email+"','"+aula+"',STR_TO_DATE('"+data+"','%d/%m/%Y'),'"+hora+"','"+grup+"','"+profe+"')";
+    con.query(sql, function (err, result) {
+      if (err) throw err;
+      console.log("Number of records inserted: " + result.affectedRows)
+    });
+  } catch (err) {
+    console.log('could not send mail: ' + err.message)
+  }
+}
+
+export default recgo;
