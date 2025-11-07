@@ -294,7 +294,7 @@ router.get("/loadXml", (req, res) => {
 router.get("/load", (req, res) => {
   //Insert a record in the "revisions fetes" table:
   var sql = req.query.codi;
-  console.log(sql);
+  //console.log(sql);
   var errors = "e->";
   var results = "r->";
   if ((sql) && sql.includes("INSERT")) {
